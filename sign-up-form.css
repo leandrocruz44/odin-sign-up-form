@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: aquamarine
+    background-image: linear-gradient(45deg, aqua, rgb(255, 103, 255));
 }
 
 .box{
@@ -93,7 +93,7 @@ form{
 }
 
 button{
-    background-color: darkolivegreen;
+    background-color: #596D48;
     width: 190px;
     height: 50px;
     border-radius: 15px;
@@ -103,4 +103,12 @@ button{
 
 button:hover{
     cursor: pointer;
+    background-color: rgb(125, 146, 88);
+}
+
+a{
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
