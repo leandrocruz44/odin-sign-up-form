@@ -25,14 +25,14 @@
             </div>
             <div class="formfields">
                 <p>Let's do this!</p>
-                <form action="#" method="get">
+                <form action="" method="get">
                     <div class="fields">
                         <label for="first_name">FIRST NAME</label><br>
-                        <input type="text" id="first_name" placeholder="Robert" required>
+                        <input type="text" id="first_name" placeholder="Robert" pattern="[a-zA-Z]*" required>
                     </div>
                     <div class="fields">
                         <label for="last_name">LAST NAME</label><br>
-                        <input type="text" id="last_name" placeholder="Law" required>
+                        <input type="text" id="last_name" placeholder="Law" pattern="[a-zA-Z\s]*" required>
                     </div>
                     <div class="fields">
                         <label for="e-mail">E-MAIL</label><br>
@@ -44,13 +44,19 @@
                     </div>
                     <div class="fields">
                         <label for="pwd">PASSWORD</label><br>
-                        <input type="password" name="pwd" id="pwd" required> 
+                        <input type="password" name="pwd" id="pwd" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required> 
+                        <p id="hide">Password should contain at least: <br>
+                            *Six characters <br>
+                            *One uppercase character <br>
+                            *One lowercase character <br>
+                            *One number
+                        </p>
                     </div>
                     <div class="fields">
                         <label for="confirmpwd">CONFIRM PASSWORD</label><br>
-                        <input type="password" name="confirmpwd" id="confirmpwd" required>
+                        <input type="password" name="confirmpwd" id="confirmpwd" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  required>
                     </div>
-                    <div><button type="submit">CREATE ACCOUNT</button></div>
+                    <div><button onclick="validate()">CREATE ACCOUNT</button></div>
                 </form>
             </div>
             <div class="log-in">
@@ -58,6 +64,6 @@
             </div>
         </div>
     </div>
-
+<script src="sign-up.js"></script>
 </body>
 </html>
